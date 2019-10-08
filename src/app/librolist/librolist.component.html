@@ -1,0 +1,27 @@
+<body>
+    <div>
+        <h1 class="h2" style="text-align: center">Lista De Libros</h1>
+    </div>
+    <div>
+
+
+        <table class='table table-dark table-striped' id="myTable">
+            <thead>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Titulo</th>
+                    <th>Precio de venta</th>
+                    <th>Popularidad</th>
+                    <!-- <th>Modificar-Elimi</th> -->
+                </tr>
+            </thead>
+            <tr *ngFor="let libro of libros">
+                <td>{{libro.isbn}}</td>
+                <td>{{libro.titulo}}</td>
+                <td>{{libro.precioVenta}}</td>
+                <td><span *ngIf="libro.popularidad===true;"> <b>Popular</b> </span></td>
+                <!-- <td><a routerLink="/libroEditElim/{{libro.isbn}}">Editar-Modifi</a></td> -->
+            </tr>
+        </table>
+    </div>
+</body>

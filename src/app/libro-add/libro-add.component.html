@@ -1,0 +1,35 @@
+<div style="text-align:center"
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 style="text-align:center" class="h2" style="text-align: center">Agregar Libro </h1>
+</div>
+
+<div class="form-group">
+    <label> ISBN:
+        <input style="text-align:center" [(ngModel)]="libro.isbn" class="form-control" 
+        placeholder="digite ISBN" type="number" />
+    </label>
+</div>
+
+<div class="form-group">
+    <label> Titulo:
+        <input style="text-align:center" [(ngModel)]="libro.titulo" class="form-control"
+            placeholder="digite el titulo del libro" type="text" />
+    </label>
+</div>
+
+<div class="form-group">
+    <label>Precio De Venta:
+        <input style="text-align:center" [(ngModel)]="libro.precioVenta" class="form-control"
+            placeholder="digite el precio " type="number" />
+    </label>
+</div>
+
+<div class="form-group">
+    <label>Popular:
+        <input type="checkbox" class="form-control" id="ChkPopular" [(ngModel)]="libro.popularidad" />
+    </label>
+</div>
+
+<div class="form-group">
+    <button (click)="add()" class="btn btn-primary">Agregar Libro </button>
+</div>
